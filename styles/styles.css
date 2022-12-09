@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap');
+*{
+    padding:0;
+    margin:0;
+}
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    color:white;
+    background:#232136;
+    
+}
+
+header{
+    background:#00346E;
+}
+
+nav{
+    font-size:1.5rem;
+}
+
+ul{
+    list-style:none;
+    display:flex;
+    flex-direction:wrap;
+    justify-content:center;
+}
+
+li{
+    padding:2rem;
+    border:0.5px solid #004591;
+}
+
+li:hover{
+    background:#004591;
+}
+
+li a{
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+    letter-spacing:0.2em;
+}
+
+a:hover{
+    color:#FFDB45;
+}
+
+main{
+    /*border: 1px solid red;*/
+    display:flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+    justify-content:space-evenly;
+}
+
+article{
+    /*border: 1px solid yellow;*/
+    margin:1rem;
+}
+
+article img{
+    object-fit:cover;
+    width:100%;
+    height:auto;
+}
+
+
+.precio{
+    color:#DC1E29;
+    display:flex;
+    justify-content:center;
+    margin:0.5rem;
+}
+
+.agregar{
+    display:flex;
+    justify-content:center;
+    border:1px solid white;
+    padding:0.5rem 0;
+    border-radius:15px;
+}
+.agregar a{
+    color:#0F66C0;
+    text-decoration:none;
+}
+
+
+.agregar a:hover{
+    color:#FFDB45;
+}
+
+
+@media (min-width: 700px) { 
+   main{
+    margin:3% 10%;
+   } 
+}

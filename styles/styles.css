@@ -57,6 +57,8 @@ main{
 article{
     /*border: 1px solid yellow;*/
     margin:1rem;
+    width:15rem;
+
 }
 
 article img{
@@ -65,31 +67,37 @@ article img{
     height:auto;
 }
 
-
 .precio{
     color:#DC1E29;
-    display:flex;
-    justify-content:center;
     margin:0.5rem;
 }
 
 .agregar{
+    padding:0.5rem 1rem;
+    border:none;
+    border-radius:15px;
+    background:#00346E;
+    color:white;
+}
+
+.agregar:hover{
+    color:#FFDB45;
+    cursor:pointer;
+    background:#004591;
+}
+
+.center{
+    display: flex;
+    flex-direction:column;
+    align-items:center;
+}
+
+footer{
     display:flex;
     justify-content:center;
-    border:1px solid white;
-    padding:0.5rem 0;
-    border-radius:15px;
+    padding:1rem;
+    background:#00346E;
 }
-.agregar a{
-    color:#0F66C0;
-    text-decoration:none;
-}
-
-
-.agregar a:hover{
-    color:#FFDB45;
-}
-
 
 @media (min-width: 700px) { 
    main{

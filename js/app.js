@@ -4,10 +4,9 @@
 //delete localStorage.test;
 
 
-function myFunction(id,price){
+function myFunction(id){
 
     //obteniendo datos
-    console.log(id+' '+price)
     let obtener = document.getElementById(id)
     console.log(obtener)
     let nombre = obtener.querySelector(".nombre").textContent;
@@ -16,9 +15,23 @@ function myFunction(id,price){
     console.log(precio)
 
     //guardando en local storage
-    localStorage.setItem(`${id}`, `${price},${nombre}`);
+    localStorage.setItem(`${id}`, `${precio},${nombre}`);
     //obtener local storage
     console.log(localStorage.getItem(`${id}`));
-    console.log(localStorage.getItem(`${id}[0]`))
+
+    // retrieving our data and converting it back into an array
+    var retrievedData = localStorage.getItem(`${id}`);
+    console.log(retrievedData)
+    //var arreglos = JSON.parse(retrievedData);
+ 
+    //making sure it still is an array
+//alert(arreglos.length);
+
 }
 
+function borrar(id){
+    alert('borrando...');
+
+
+
+}

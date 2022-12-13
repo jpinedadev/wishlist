@@ -16,7 +16,8 @@ function myFunction(id){
 
     //guardando en local storage
     localStorage.setItem(`${id}`, `${precio},${nombre}`);
-   
+
+    swal("¡Éxito!", "Juego agregado a tu lista!", "success"); 
       pinta(id)
 
 }

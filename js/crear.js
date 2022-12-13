@@ -20,16 +20,43 @@ for (let i = 0; i < aLength; i++) {
     console.log('Nombre: '+nombre)
     console.log('precio: '+precio)
 
-    divParent = document.querySelector('#app');
-    divParent.insertAdjacentHTML('afterbegin',`<div id='${clave}'><h3>${nombre}</h3><p>Precio: ${precio}</p><button onclick="borrar('${clave}')" class='agregar'>Borrar</button></div>`);
+
+    divParent = document.querySelector('.default');
+    divParent.insertAdjacentHTML('beforeend',`<tr id='${clave}'><td>${nombre}</td><td>${precio}</td><td><button onclick="borrar('${clave}')" class='agregar'>Borrar</button></td></tr>`);
+
     }
+
 }
 
 function borrar(id){
     console.log(id)
     //    delete localStorage.id;
-    localStorage.removeItem(id);
-    window.location.reload()
+
+
+swal({
+  title: "¿Deseas borrarlo?",
+  text: "¡El juego será borrado de tu lista!",
+  icon: "warning",
+  buttons: true,
+  dangerMode: true,
+})
+.then((willDelete) => {
+    if (willDelete) {
+        localStorage.removeItem(id);
+        swal("¡Borrado con éxito!", {
+            icon: "success",
+
+        });   
+    
+        setTimeout(function(){
+            window.location.reload()
+        }, 1000);
+
+  } else {
+    swal("¡Juego guardado!");
+  }
+});
+    //window.location.reload()
 
 }
 

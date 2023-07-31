@@ -60,7 +60,7 @@ Estas son las instrucciones para poder instalar y configurar el proyecto en tu o
 1. Ubicate en el directorio deseado ejem:(/escritorio/)
 2. Clona el repositorio
    ```sh
-   git clone https://github.com/jpinedadev/coinbase.git
+   git clone https://github.com/jpinedadev/wishlist.git
    ```
 
 3.  Abre la terminal y navega hasta la carpeta wishlist
